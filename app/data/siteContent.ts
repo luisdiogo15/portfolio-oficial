@@ -14,17 +14,16 @@ export const siteContent = {
     { label: "Contacto", href: "#contacto" },
   ],
   hero: {
-    saudacao: "Olá, sou o Luís Sousa",
-    titulo: "Desenvolvedor de software focado em soluções fiáveis e simples",
-    descricao:
-      "Construo experiências digitais com atenção à performance, legibilidade e impacto no negócio.",
-    ctaPrincipal: { label: "Ver projetos", href: "#projetos" },
-    ctaSecundario: { label: "Falar comigo", href: "#contacto" },
+  saudacao: "Olá, sou o Luís Diogo",
+  titulo: "Estudante de Engenharia Informática focado em construir projetos reais e funcionais",
+  descricao:
+    "Tenho 18 anos e estou a iniciar o meu percurso na área da tecnologia. Este site é o meu portfólio, onde partilho os projetos que vou desenvolvendo ao longo da universidade e da minha evolução pessoal.",
+  ctaPrincipal: { label: "Ver projetos", href: "#projetos" },
+  ctaSecundario: { label: "Falar comigo", href: "#contacto" },
   },
   sobre: {
-    titulo: "Sobre mim",
-    conteudo:
-      "Sou um profissional de tecnologia com foco em desenvolvimento web e aplicações escaláveis. Gosto de transformar requisitos complexos em produtos claros, rápidos e fáceis de manter.",
+    titulo: "Estudante de Engenharia Informática",
+    descricao: "Este é o meu espaço pessoal onde partilho os projetos que vou desenvolvendo e a minha evolução na área da tecnologia.",
   },
   skills: {
     titulo: "Competências",
