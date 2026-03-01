@@ -23,7 +23,7 @@ export const siteContent = {
   },
   sobre: {
     titulo: "Estudante de Engenharia Informática",
-    descricao: "Este é o meu espaço pessoal onde partilho os projetos que vou desenvolvendo e a minha evolução na área da tecnologia.",
+    conteudo: "Este é o meu espaço pessoal onde partilho os projetos que vou desenvolvendo e a minha evolução na área da tecnologia.",
   },
   skills: {
     titulo: "Competências",
