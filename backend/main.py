@@ -32,6 +32,10 @@ app.add_middleware(
 def health() -> dict[str, str]:
     return {"status": "ok"}
 
+@app.get("/", status_code=status.HTTP_200_OK)
+def root() -> dict[str, str]:
+    return {"status": "Backend running"}
+
 
 @app.post("/contact", status_code=status.HTTP_200_OK)
 def contact(payload: ContactRequest) -> dict[str, str]:
