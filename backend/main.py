@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 from typing import List
 
+import resend
 from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr, Field
@@ -12,6 +13,13 @@ class ContactRequest(BaseModel):
     nome: str = Field(min_length=1, max_length=120)
     email: EmailStr
     mensagem: str = Field(min_length=1, max_length=2000)
+
+
+RESEND_API_KEY = os.getenv("RESEND_API_KEY")
+CONTACT_TO_EMAIL = os.getenv("CONTACT_TO_EMAIL")
+
+if RESEND_API_KEY:
+    resend.api_key = RESEND_API_KEY
 
 
 app = FastAPI(title="Portfolio API", version="1.0.0")
@@ -32,6 +40,7 @@ app.add_middleware(
 def health() -> dict[str, str]:
     return {"status": "ok"}
 
+
 @app.get("/", status_code=status.HTTP_200_OK)
 def root() -> dict[str, str]:
     return {"status": "Backend running"}
@@ -46,11 +55,38 @@ def contact(payload: ContactRequest) -> dict[str, str]:
                 detail="Os campos nome e mensagem não podem estar vazios.",
             )
 
-        # Sem base de dados nesta fase: resposta de sucesso para integração frontend.
-        return {"status": "sucesso", "mensagem": "Mensagem recebida com sucesso."}
+        if not RESEND_API_KEY:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="RESEND_API_KEY não está definida no servidor.",
+            )
+
+        if not CONTACT_TO_EMAIL:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="CONTACT_TO_EMAIL não está definido no servidor.",
+            )
+
+        resend.Emails.send(
+            {
+                "from": "Portfolio <onboarding@resend.dev>",
+                "to": CONTACT_TO_EMAIL,
+                "subject": f"Nova mensagem de {payload.nome}",
+                "reply_to": payload.email,
+                "html": f"""
+                    <p><b>Nome:</b> {payload.nome}</p>
+                    <p><b>Email:</b> {payload.email}</p>
+                    <p><b>Mensagem:</b></p>
+                    <p>{payload.mensagem}</p>
+                """,
+            }
+        )
+
+        return {"status": "sucesso", "mensagem": "Email enviado com sucesso."}
+
     except HTTPException:
         raise
-    except Exception as exc:  # pragma: no cover
+    except Exception as exc:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Erro interno ao processar o contacto.",

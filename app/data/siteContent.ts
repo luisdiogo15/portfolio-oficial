@@ -22,8 +22,9 @@ export const siteContent = {
   ctaSecundario: { label: "Falar comigo", href: "#contacto" },
   },
   sobre: {
-    titulo: "Estudante de Engenharia Informática",
-    conteudo: "Este é o meu espaço pessoal onde partilho os projetos que vou desenvolvendo e a minha evolução na área da tecnologia.",
+    titulo: "Sobre mim",
+    conteudo:
+      "Sou um estudante de Engenharia Informática com foco em desenvolvimento web e aplicações escaláveis. Gosto de transformar requisitos complexos em produtos claros, rápidos e fáceis de manter.",
   },
   skills: {
     titulo: "Competências",
