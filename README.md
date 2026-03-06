@@ -1,13 +1,39 @@
-# Portefólio Pessoal (Next.js + FastAPI)
+# Portefólio Pessoal Full-Stack
 
-Projeto de portefólio com frontend em Next.js (TypeScript) e backend em FastAPI.
+Projeto de portefólio pessoal com **frontend em Next.js (TypeScript)** e **backend em FastAPI**, incluindo formulário de contacto com envio real de emails através da **Resend API**.
 
-## Estrutura
+---
 
-- `app/`: frontend Next.js
-- `backend/main.py`: API FastAPI
-- `backend/requirements.txt`: dependências Python
-- `backend/.env.example`: exemplo de variáveis de ambiente do backend
+## Stack
+
+**Frontend**
+- Next.js
+- TypeScript
+- React
+- Tailwind CSS
+
+**Backend**
+- FastAPI
+- Python
+- Pydantic
+
+**Serviços**
+- Vercel (frontend)
+- Render (backend)
+- Resend (envio de emails)
+
+---
+
+## Estrutura do projeto
+
+- `app/` → frontend Next.js  
+- `app/components/` → componentes da interface  
+- `app/data/siteContent.ts` → textos do site  
+- `backend/main.py` → API FastAPI  
+- `backend/requirements.txt` → dependências Python  
+- `backend/.env.example` → exemplo de variáveis de ambiente  
+
+---
 
 ## Desenvolvimento local
 
@@ -17,7 +43,6 @@ Projeto de portefólio com frontend em Next.js (TypeScript) e backend em FastAPI
 cd ~/portfolio-oficial
 npm install
 npm run dev -- --webpack
-```
 
 ### Backend
 
@@ -47,21 +72,25 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
 
 ```bash
 BACKEND_CORS_ORIGINS=http://localhost:3000,https://teu-projeto.vercel.app
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxx
+CONTACT_TO_EMAIL=teuemail@gmail.com
 ```
 
 ## Endpoints backend
 
-- `GET /health` -> `{ "status": "ok" }`
-- `POST /contact` -> recebe `{ nome, email, mensagem }`
+- `GET /health` → `{ "status": "ok" }`
+- `POST /contact` → recebe `{ nome, email, mensagem }` e envia um email através da **Resend API**
 
-## Deploy: Frontend na Vercel + Backend no Render (grátis)
+---
+
+## Deploy: Frontend na Vercel + Backend no Render (plano gratuito)
 
 ### 1) Publicar código
 
 ```bash
 cd ~/portfolio-oficial
 git add .
-git commit -m "chore: preparar deploy vercel-render"
+git commit -m "deploy: portfolio vercel + render"
 git push
 ```
 
