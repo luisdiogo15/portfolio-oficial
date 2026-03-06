@@ -1,6 +1,15 @@
 # Portefólio Pessoal Full-Stack
 
-Projeto de portefólio pessoal com **frontend em Next.js (TypeScript)** e **backend em FastAPI**, incluindo formulário de contacto com envio real de emails através da **Resend API**.
+🌐 **Live Demo:** https://portfolio-oficial-three.vercel.app
+
+![Next.js](https://img.shields.io/badge/Next.js-000?logo=nextdotjs)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000?logo=vercel)
+![Render](https://img.shields.io/badge/Render-46E3B7)
+
+Projeto de portefólio pessoal com frontend em Next.js (TypeScript) e backend em FastAPI, incluindo formulário de contacto com envio real de emails através da Resend API.
 
 ---
 
