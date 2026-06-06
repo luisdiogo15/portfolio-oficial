@@ -25,7 +25,7 @@ export const siteContent = {
   titulo: "Sobre mim",
   conteudo:
     "Sou estudante de Engenharia Informática na Universidade da Madeira. Tenho interesse por programação, desenvolvimento de software e tecnologia em geral. Fora dos estudos, gosto de treinar no ginásio e de me desafiar constantemente a aprender e evoluir. Neste portefólio apresento alguns dos projetos e competências que tenho desenvolvido ao longo do meu percurso académico.",
-},
+  },
     skills: {
       titulo: "Competências",
       lista: [
