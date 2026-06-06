@@ -22,10 +22,10 @@ export const siteContent = {
   ctaSecundario: { label: "Falar comigo", href: "#contacto" },
   },
   sobre: {
-    titulo: "Sobre mim",
-    conteudo:
-      "Sou um estudante de Engenharia Informática com foco em desenvolvimento web e aplicações escaláveis. Gosto de transformar requisitos complexos em produtos claros, rápidos e fáceis de manter.",
-  },
+  titulo: "Sobre mim",
+  conteudo:
+    "Sou estudante de Engenharia Informática na Universidade da Madeira. Tenho interesse por programação, desenvolvimento de software e tecnologia em geral. Fora dos estudos, gosto de treinar no ginásio e de me desafiar constantemente a aprender e evoluir. Neste portefólio apresento alguns dos projetos e competências que tenho desenvolvido ao longo do meu percurso académico.",
+},
     skills: {
       titulo: "Competências",
       lista: [
