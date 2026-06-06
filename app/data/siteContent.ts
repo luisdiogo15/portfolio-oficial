@@ -43,25 +43,26 @@ export const siteContent = {
     titulo: "Projetos",
     lista: [
       {
-        titulo: "Sistema de Gestão de Tarefas",
-        stack: ["React", "TypeScript", "Node.js"],
+        titulo: "Portefólio Pessoal Full-Stack",
+        stack: ["Next.js", "TypeScript", "FastAPI", "Python", "Resend"],
         descricao:
-          "Plataforma para organização de equipas com quadros, estados personalizados e histórico de atividade.",
-        githubUrl: "#",
+          "Site pessoal desenvolvido com Next.js e TypeScript, com backend em FastAPI, formulário de contacto funcional e envio real de emails através da Resend API.",
+        githubUrl: "https://github.com/luisdiogo15/portfolio-oficial.git",
       },
       {
-        titulo: "Análise de Dados de Vendas",
-        stack: ["Python", "Pandas", "SQL"],
+        titulo: "Simulador EDA FC",
+        stack: ["C++", "Structs", "Arrays Dinâmicos", "Ficheiros"],
         descricao:
-          "Pipeline de dados com relatórios automáticos para apoiar decisões comerciais semanais.",
-        githubUrl: "#",
+          "Projeto académico em C++ que simula a gestão de uma equipa de futebol, incluindo plantel, titulares, suplentes, jornadas, lesões, castigos, transferências e gravação de dados.",
+        githubUrl: "https://github.com/luisdiogo15/EDA_Cpp.git",
       },
-      {
-        titulo: "Motor Gráfico Educativo",
-        stack: ["C++", "OpenGL", "CMake"],
+
+{
+        titulo: "SuperEDA — Gestão de Supermercado",
+        stack: ["C++", "Listas Ligadas", "Árvores BST", "Ficheiros"],
         descricao:
-          "Projeto académico para visualização 3D interativa e exploração de conceitos de computação gráfica.",
-        githubUrl: "#",
+          "Projeto académico em C++ que simula o funcionamento de um supermercado, incluindo gestão de stock, setores, campanhas, vendas, armazém e registo de produtos vendidos.",
+        githubUrl: "https://github.com/luisdiogo15/EDA_Projeto2_SuperEDA.git",
       },
     ] as Projeto[],
   },
