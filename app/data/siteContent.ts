@@ -26,19 +26,20 @@ export const siteContent = {
     conteudo:
       "Sou um estudante de Engenharia Informática com foco em desenvolvimento web e aplicações escaláveis. Gosto de transformar requisitos complexos em produtos claros, rápidos e fáceis de manter.",
   },
-  skills: {
-    titulo: "Competências",
-    lista: [
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Node.js",
-      "Python",
-      "C++",
-      "SQL",
-      "Git",
-    ],
-  },
+    skills: {
+      titulo: "Competências",
+      lista: [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Python",
+        "FastAPI",
+        "C++",
+        "Git",
+  ],
+},
+
   projetos: {
     titulo: "Projetos",
     lista: [
